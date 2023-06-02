@@ -1,7 +1,7 @@
 import java.awt.Color;
 import java.awt.Graphics;
 
-public class Board extends Jframe {
+public class LudoBoard extends Jframe {
     public Board() {
         addBoard();
     }

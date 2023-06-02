@@ -2,7 +2,7 @@ import java.awt.event.KeyEvent;
 import java.awt.event.KeyListener;
 import java.util.Random;
 
-public class Dice implements KeyListener {
+public class LudoDice implements KeyListener {
     final int value;
 
     static Random rd = new Random();

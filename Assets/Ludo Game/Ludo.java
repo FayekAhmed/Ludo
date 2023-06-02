@@ -1,10 +1,10 @@
 public class Ludo {
     public static void main(String[] args) {
-        Pieces Player1 = new Pieces("Red");
-        Pieces Player2 = new Pieces("Blue");
-        Pieces Player3 = new Pieces("Yellow");
-        Pieces Player4 = new Pieces("Green");
+        LudoPieces Player1 = new LudoPieces("Red", 1000, 700);
+        LudoPieces Player2 = new LudoPieces("Blue", 1000, 1600);
+        LudoPieces Player3 = new LudoPieces("Yellow", 1900, 1600);
+        LudoPieces Player4 = new LudoPieces("Green", 1900, 700);
 
-        Board board = new Board();
+        LudoBoard board = new LudoBoard();
     }
 }

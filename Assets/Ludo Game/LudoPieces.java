@@ -1,18 +1,17 @@
 import java.awt.Graphics;
 
-public class LudoPieces extends Dice {
-    static LudoDice d = new Dice();
-    static LudoBoard b = new Board();
+public class LudoPieces extends LudoDice {
+    static LudoDice d = new LudoDice();
+    static LudoBoard b = new LudoBoard();
 
     private String pieceColor;
     private boolean notUnAlive;
 
-    public Pieces()
-    {
-        
+    public LudoPieces() {
+
     }
 
-    public Pieces(String str, int x, int y)
+    public LudoPieces(String str, int x, int y)
     {
         pieceColor = str;
         addPieces(x, y)
