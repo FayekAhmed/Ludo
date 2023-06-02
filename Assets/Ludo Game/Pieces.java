@@ -1,28 +1,31 @@
 import java.awt.Graphics;
-import java.awt.event.MouseEvent;
-import java.awt.event.MouseListener;
 
-public class Pieces extends Dice implements MouseListener {
-
-    static Board b = new Board();
+public class LudoPieces extends Dice {
+    static LudoDice d = new Dice();
+    static LudoBoard b = new Board();
 
     private String pieceColor;
     private boolean notUnAlive;
 
-    public Pieces() {
-
+    public Pieces()
+    {
+        
     }
 
-    public Pieces(String str) {
+    public Pieces(String str, int x, int y)
+    {
         pieceColor = str;
+        addPieces(x, y)
     }
 
-    public void addPieces(Graphics g) {
-        g.drawOval();
+    public void addPieces(Graphics g, int x, int y) {
+        g.drawOval(x, y, x + 100, y + 100);
     }
 
-    public int movePieces(int x, int y) {
-
+    public int movePieces(int xBox, int yBox)
+    {
+        int change = d.getValue();
+        if(x == )
     }
 
     public int Increment() {
@@ -38,25 +41,12 @@ public class Pieces extends Dice implements MouseListener {
 
     }
 
-    public boolean deSpawn(Object one, Object two) {
-        if (one.xCoor() == two.xCoor() && one.yCoor() == two.yCoor()) {
-
+    public boolean deSpawn(Object one, Object two)
+    {
+        if(one.xCoor() == two.xCoor() && one.yCoor() == two.yCoor())
+        {
+            notUnAlive true;
         }
-    }
-
-    public int[] mouseClicked(MouseEvent e) {
-
-    }
-
-    public void mouseExited(MouseEvent e) {
-    }
-
-    public void mouseEntered(MouseEvent e) {
-    }
-
-    public void mousePressed(MouseEvent e) {
-    }
-
-    public void mouseReleased(MouseEvent e) {
+        return notUnAlive;
     }
 }
