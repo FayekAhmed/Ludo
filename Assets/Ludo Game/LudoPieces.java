@@ -1,51 +1,33 @@
-import java.awt.Graphics;
-
 public class LudoPieces extends LudoDice {
     static LudoDice d = new LudoDice();
     static LudoBoard b = new LudoBoard();
 
     private String pieceColor;
-    private boolean notUnAlive;
+    private int value;
 
     public LudoPieces() {
-
+        value = Position();
     }
 
-    public LudoPieces(String str, int x, int y)
-    {
+    public boolean Precondition() {
+        if (d.getValue() == 1)
+            return true;
+        else
+            return false;
+    }
+
+    public LudoPieces(String str) {
         pieceColor = str;
-        addPieces(x, y)
-    }
-
-    public void addPieces(Graphics g, int x, int y) {
-        g.drawOval(x, y, x + 100, y + 100);
-    }
-
-    public int movePieces(int xBox, int yBox)
-    {
-        int change = d.getValue();
-        if(x == )
     }
 
     public int Increment() {
-        Dice d = new Dice();
+        LudoDice d = new LudoDice();
         return d.getValue();
     }
 
-    public int xCoor() {
-
+    public int Position() {
+        int result = Increment() + Increment();
+        return result;
     }
 
-    public int yCoor() {
-
-    }
-
-    public boolean deSpawn(Object one, Object two)
-    {
-        if(one.xCoor() == two.xCoor() && one.yCoor() == two.yCoor())
-        {
-            notUnAlive true;
-        }
-        return notUnAlive;
-    }
 }

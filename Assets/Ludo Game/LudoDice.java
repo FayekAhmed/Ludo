@@ -3,27 +3,26 @@ import java.awt.event.KeyListener;
 import java.util.Random;
 
 public class LudoDice implements KeyListener {
-    final int value;
+    private int value;
 
     static Random rd = new Random();
 
-    public Dice() {
-
+    public LudoDice() {
+        drawDice();
     }
 
     public void drawDice() {
         System.out.println("XXXXXXXXXXXXX");
         System.out.println("X           X");
         System.out.println("X           X");
-        System.out.println("X    " + value + "     X");
+        System.out.println("X    " + value + "      X");
         System.out.println("X           X");
         System.out.println("X           X");
         System.out.println("XXXXXXXXXXXXX");
     }
 
     public int getValue() {
-        value = rd.nextInt(6) + 1;
-        return value;
+        return rd.nextInt(6) + 1;
     }
 
     public void keyPressed(KeyEvent e) {
